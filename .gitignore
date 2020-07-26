@@ -14,6 +14,7 @@ __pycache__
 /3rdparty
 /bazel-*
 /bin
+save_dir
 /checkpoints
 /cmake-build*
 /coco

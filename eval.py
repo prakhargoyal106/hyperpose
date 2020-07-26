@@ -62,4 +62,4 @@ if __name__ == '__main__':
     evaluate=Model.get_evaluate(config)
     dataset=Dataset.get_dataset(config)
 
-    evaluate(model,dataset,vis_num=30,total_eval_num=args.eval_num)
+    evaluate(model,dataset,vis_num=60,total_eval_num=args.eval_num)

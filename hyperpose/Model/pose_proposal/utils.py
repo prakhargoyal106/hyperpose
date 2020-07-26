@@ -227,7 +227,7 @@ def non_maximium_supress(bbxs,scores,thres):
         #ious is the size [left_bbxnum]
         #print(f"test maxconf_bbx:{maxconf_bbx} lef_bbxs[0]:{left_bbxs[:,0:4].transpose()[:,0]}")
         ious=cal_iou(maxconf_bbx[0:4],left_bbxs[:,0:4].transpose())
-        print(f"test iter one ious:{ious}")
+        #print(f"test iter one ious:{ious}")
         left_idx=np.where(ious<thres)[0]
         #print(f"ious:{ious} left_idx:{left_idx} len_left_idx:{len(left_idx)}")
         if(len(left_idx)==0):

@@ -131,5 +131,9 @@ class Post_Processor:
                 x,y,w,h=bbx
                 humans[assem_id.astype(np.int)].body_parts[part_idx]=BodyPart(parts=self.parts,u_idx=f"{loc_y}-{loc_x}",part_idx=part_idx,\
                     x=x,y=y,score=score,w=w,h=h)
-        return humans
+        filter_humans=[]
+        for human in humans:
+            if(human.get_partnum()>=self.thres_part_cnt):
+                filter_humans.append(human)
+        return filter_humans
 
