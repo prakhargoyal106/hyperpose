@@ -13,9 +13,9 @@ config=Config.get_config()
 model=Model.get_model(config)
 weight_path=f"{config.model.model_dir}/newest_model.npz"
 model.load_weights(weight_path)
-
+dir = input("PAth")
 #infer on single image
-ori_image=cv2.cvtColor(cv2.imread("./sample.jpg"),cv2.COLOR_BGR2RGB)
+ori_image=cv2.cvtColor(cv2.imread(dir),cv2.COLOR_BGR2RGB)
 input_image=ori_image.astype(np.float32)/255.0
 if(model.data_format=="channels_first"):
     input_image=np.transpose(input_image,[2,0,1])
